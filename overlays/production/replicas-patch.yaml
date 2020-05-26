@@ -1,5 +1,5 @@
 ---
-apiVersion: flux.weave.works/v1beta1
+apiVersion: flux.weave.works/v1
 kind: HelmRelease
 metadata:
   name: grpcdemo-server
@@ -8,7 +8,7 @@ spec:
   values:
     replicaCount: 2
 ---
-apiVersion: flux.weave.works/v1beta1
+apiVersion: flux.weave.works/v1
 kind: HelmRelease
 metadata:
   name: promop

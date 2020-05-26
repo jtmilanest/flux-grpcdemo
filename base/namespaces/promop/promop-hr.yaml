@@ -1,4 +1,4 @@
-apiVersion: flux.weave.works/v1
+apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: promop
