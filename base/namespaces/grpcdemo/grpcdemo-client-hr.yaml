@@ -1,5 +1,5 @@
 apiVersion: flux.weave.works/v1beta1
-kind: HelmRelease
+kind: FluxHelmRelease
 metadata:
   name: grpcdemo-client
   namespace: grpcdemo
