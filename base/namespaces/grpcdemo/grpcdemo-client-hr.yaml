@@ -4,10 +4,10 @@ metadata:
   name: grpcdemo-client
   namespace: grpcdemo
   annotations:
-    flux.weave.works/automated: "false"
+    flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~0
 spec:
-  helmVersion: v3
+  # helmVersion: v3
   releaseName: grpcdemo-client
   chart:
     git: git@github.com:jwenz723/grpcdemo
