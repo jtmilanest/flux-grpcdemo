@@ -7,10 +7,10 @@ metadata:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~0
 spec:
-  helmVersion: v2
+  helmVersion: v3
   releaseName: grpcdemo-client
   chart:
-    git: git@github.com:jtmilanest/flux-grpcdemo
+    git: git@github.com:jtmilanest/grpcdemo
     ref: master
     path: helm/grpcdemo-client
   values:
