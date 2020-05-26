@@ -10,7 +10,7 @@ spec:
   helmVersion: v2
   releaseName: grpcdemo-client
   chart:
-    git: git@github.com:jtmilanest/grpcdemo
+    git: git@github.com:jtmilanest/flux-grpcdemo
     ref: master
     path: helm/grpcdemo-client
   values:
