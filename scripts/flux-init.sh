@@ -7,7 +7,7 @@ if [[ ! -x "$(command -v kubectl)" ]]; then
     exit 1
 fi
 
-if [[ ! -x "$(command -v helm-v2)" ]]; then
+if [[ ! -x "$(command -v helm)" ]]; then
     echo "helm (https://helm.sh/docs/using_helm/#installing-helm) not found"
     exit 1
 fi
@@ -55,11 +55,11 @@ helmOperator:
         username: ""
 EOF
 
-# helm-v2 repo add fluxcd https://fluxcd.github.io/flux
-helm-v2 repo add fluxcd https://charts.fluxcd.io
+# helm repo add fluxcd https://fluxcd.github.io/flux
+helm repo add fluxcd https://charts.fluxcd.io
 
 echo ">>> Installing Flux for ${REPO_URL}"
-helm-v2 upgrade -i flux --wait \
+helm upgrade -i flux --wait --force \
 --set git.url=${REPO_URL} \
 --set git.branch=${REPO_BRANCH} \
 --set git.pollInterval=15s \
