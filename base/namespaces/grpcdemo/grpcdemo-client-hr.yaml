@@ -10,7 +10,7 @@ spec:
   helmVersion: v2
   releaseName: grpcdemo-client
   chart:
-    git: git@github.com:jwenz723/grpcdemo
+    git: git@github.com:jtmilanest/grpcdemo
     ref: master
     path: helm/grpcdemo-client
   values:
