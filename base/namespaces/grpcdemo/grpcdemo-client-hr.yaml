@@ -4,7 +4,7 @@ metadata:
   name: grpcdemo-client
   namespace: grpcdemo
   annotations:
-    flux.weave.works/automated: "true"
+    flux.weave.works/automated: "false"
     flux.weave.works/tag.chart-image: semver:~0
 spec:
   releaseName: grpcdemo-client
