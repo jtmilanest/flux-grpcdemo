@@ -1,8 +1,8 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: weavescope
-  namespace: weavescope
+  name: weave-scope
+  namespace: weave-scope
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.chart-image: semver:~0
