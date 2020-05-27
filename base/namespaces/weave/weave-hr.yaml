@@ -1,0 +1,24 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: weavescope
+  namespace: weavescope
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: semver:~0
+spec:
+  helmVersion: v2
+  releaseName: weave-scope
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: weave-scope
+    version: 1.1.10
+  values:
+    global:
+      # global.image: the image that will be used for this release
+      image:
+        repository: weaveworks/scope
+        tag: 1.12.0
+
+        weave-scope-cluster-agent:
+          enabled: true

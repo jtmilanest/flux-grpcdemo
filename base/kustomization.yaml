@@ -6,3 +6,5 @@ resources:
   - namespaces/grpcdemo/namespace.yaml
   - namespaces/promop/namespace.yaml
   - namespaces/promop/promop-hr.yaml
+  - namespaces/weave/namespace.yaml
+  - namespaces/weave/weave-hr.yaml
