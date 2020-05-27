@@ -12,7 +12,7 @@ spec:
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/
     name: prometheus-operator
-    version: 8.13.8
+    version: 8.13.7
   values:
     # The following config is necessary for AWS EKS:
     # Not monitoring etcd, kube-scheduler, or kube-controller-manager because it is managed by EKS
@@ -33,7 +33,14 @@ spec:
     # end AWS EKS config
 
     # this is needed for minikube
+
+    kubeProxy:
+      enabled: true
+      serviceMonitor:
+        https: false
+
     kubelet:
+      namespace: kube-system
       serviceMonitor:
         https: false
 
