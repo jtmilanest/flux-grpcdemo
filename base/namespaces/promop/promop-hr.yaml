@@ -42,7 +42,9 @@ spec:
     kubelet:
       namespace: kube-system
       serviceMonitor:
-        https: false
+        https: true
+        ## Enable scraping /metrics/cadvisor from kubelet's service
+        cAdvisor: true        
 
     kubeEtcd:
       service:
