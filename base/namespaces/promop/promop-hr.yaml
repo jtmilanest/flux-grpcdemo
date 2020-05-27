@@ -12,7 +12,7 @@ spec:
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/
     name: prometheus-operator
-    version: 8.13.7
+    version: 5.19.0
   values:
     # The following config is necessary for AWS EKS:
     # Not monitoring etcd, kube-scheduler, or kube-controller-manager because it is managed by EKS
@@ -47,7 +47,7 @@ spec:
     kubeEtcd:
       service:
         selector:
-          # k8s-app: null
+          k8s-app: null
           component: etcd
 
     grafana:
