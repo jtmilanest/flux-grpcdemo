@@ -47,7 +47,7 @@ spec:
     kubeEtcd:
       service:
         selector:
-          k8s-app: null
+          # k8s-app: null
           component: etcd
 
     grafana:
